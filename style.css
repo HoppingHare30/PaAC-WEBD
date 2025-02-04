@@ -1,0 +1,210 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;  /* Ensuring the background is black */
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure the body takes the full height */
+    display: flex;
+    flex-direction: column; /* To ensure content stretches properly */
+  }
+  
+  html, body {
+    height: 100%; /* Ensure full height on all screen sizes */
+  }
+  
+  header, footer {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #f39c12;
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    color: #f39c12;
+    margin-top: 40px;
+  }
+  
+  footer p {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+  /* Event List Page */
+  .events-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px;
+  }
+  
+  .event-card {
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  .event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .event-info {
+    padding: 10px;
+  }
+  
+  .event-info h3 {
+    font-size: 1.5rem;
+    color: #f39c12;
+  }
+  
+  .event-info p {
+    color: #ccc;
+  }
+  
+  /* Event Detail Page */
+  .event-header {
+    background-color: #111;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .event-header h1 {
+    font-size: 3rem;
+    color: #f39c12;
+  }
+  
+  .event-header p {
+    font-size: 1.2rem;
+    color: #ccc;
+  }
+  
+  .event-detail {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .carousel-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden;
+  }
+  
+  .carousel-images img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: none; /* Initially hide images */
+  }
+  
+  .carousel-images img.active {
+    display: block; /* Only show the active image */
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .past-editions {
+    margin-top: 40px;
+  }
+  
+  .edition-year {
+    margin-bottom: 30px;
+  }
+  
+  .edition-year span {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f39c12;
+  }
+  
+  .edition-images {
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+  }
+  
+  .edition-images img {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Mobile-specific fixes */
+  @media (max-width: 768px) {
+    .carousel-images {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .carousel-images img {
+      width: 90%;
+      margin-bottom: 10px;
+    }
+  
+    .edition-images {
+      flex-direction: column;
+    }
+  
+    .edition-images img {
+      width: 80%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+  
+    /* Centering event details */
+    .event-info {
+      padding: 10px;
+      text-align: center;
+    }
+  
+    footer {
+      font-size: 0.8rem;
+    }
+  
+    /* Ensure full black background for body and main content */
+    body {
+      background-color: #000;
+    }
+  
+    /* Ensure the content stretches fully on mobile */
+    .events-list, .event-detail {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  
